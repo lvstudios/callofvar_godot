@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://t16i8yn5nn0t"]
+
+[ext_resource type="Texture2D" uid="uid://ceqo1vaj5gs6u" path="res://menues/image_de_fond_des_menues.png" id="1_l63fl"]
+[ext_resource type="Script" uid="uid://c6kqf0nbls261" path="res://menues/reglages_du_jeu.gd" id="1_u0jec"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_u0jec"]
+load_path = "res://.godot/imported/bouton-retour.png-09d474d5e8f7a57dde8961eb54d56085.ctex"
+
+[node name="ReglagesDuJeu" type="Node2D" unique_id=1323486347]
+script = ExtResource("1_u0jec")
+
+[node name="ImageDeFondDesMenues" type="Sprite2D" parent="." unique_id=1971080884]
+position = Vector2(954.5, 539.25)
+scale = Vector2(1.1561005, 1.142933)
+texture = ExtResource("1_l63fl")
+
+[node name="CheckButton" type="CheckButton" parent="." unique_id=996940289]
+offset_left = 223.0
+offset_top = 145.0
+offset_right = 618.0
+offset_bottom = 192.0
+theme_override_colors/font_color = Color(1, 0.8745098, 0.8745098, 1)
+theme_override_colors/font_focus_color = Color(0, 0.9490196, 0.9490196, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 43
+theme_override_colors/button_checked_color = Color(0, 1, 0.2784314, 1)
+theme_override_colors/button_unchecked_color = Color(1, 0, 0, 1)
+text = "plein ecran "
+
+[node name="Button" type="Button" parent="." unique_id=715500377]
+offset_left = 803.0
+offset_top = 903.0
+offset_right = 1075.0
+offset_bottom = 1055.0
+theme_override_font_sizes/font_size = 34
+text = "Retour"
+icon = SubResource("CompressedTexture2D_u0jec")
+flat = true
+expand_icon = true
+
+[connection signal="pressed" from="CheckButton" to="." method="_on_check_button_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

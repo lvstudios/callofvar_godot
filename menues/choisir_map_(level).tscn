@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://bncbb3nom7rqx"]
+
+[ext_resource type="Script" uid="uid://cdgf5mrvihhv7" path="res://menues/choisir_map.gd" id="1_fb6ax"]
+[ext_resource type="Texture2D" uid="uid://ceqo1vaj5gs6u" path="res://menues/image_de_fond_des_menues.png" id="2_tuue4"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_tuue4"]
+load_path = "res://.godot/imported/Ensign_of_France.svg.png-70c4bc17205ffcefa05d90f004109d5e.ctex"
+
+[sub_resource type="LabelSettings" id="LabelSettings_typ25"]
+font_size = 44
+outline_size = 14
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_typ25"]
+load_path = "res://.godot/imported/bouton-retour.png-09d474d5e8f7a57dde8961eb54d56085.ctex"
+
+[node name="choisir map (level)" type="Node2D" unique_id=1840902742]
+script = ExtResource("1_fb6ax")
+
+[node name="France metropolitaine" type="Button" parent="." unique_id=1826506633]
+offset_left = 131.0
+offset_top = 157.0
+offset_right = 539.0
+offset_bottom = 247.0
+theme_override_font_sizes/font_size = 18
+text = "FRANCE
+(Metropolitaine)"
+icon = SubResource("CompressedTexture2D_tuue4")
+expand_icon = true
+
+[node name="ImageDeFondDesMenues" type="Sprite2D" parent="." unique_id=18819505]
+z_index = -1
+position = Vector2(973, 542.25)
+scale = Vector2(1.1483253, 1.1450584)
+texture = ExtResource("2_tuue4")
+
+[node name="titre_consigne" type="Label" parent="." unique_id=253791995]
+offset_left = 171.0
+offset_top = 66.0
+offset_right = 896.0
+offset_bottom = 134.0
+theme_override_font_sizes/font_size = 30
+text = "Choisissez une map"
+label_settings = SubResource("LabelSettings_typ25")
+
+[node name="retour" type="Button" parent="." unique_id=795111069]
+offset_left = 829.0
+offset_top = 903.0
+offset_right = 1101.0
+offset_bottom = 1055.0
+theme_override_font_sizes/font_size = 34
+text = "Retour"
+icon = SubResource("CompressedTexture2D_typ25")
+flat = true
+expand_icon = true
+
+[connection signal="pressed" from="France metropolitaine" to="." method="_on_france_metropolitaine_pressed"]
+[connection signal="pressed" from="retour" to="." method="_on_retour_pressed"]

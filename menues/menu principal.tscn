@@ -1,0 +1,84 @@
+[gd_scene format=3 uid="uid://d0l23sfirxv2h"]
+
+[ext_resource type="Script" uid="uid://dha3ivvxbii1r" path="res://menues/menu_principal.gd" id="1_qbgc6"]
+[ext_resource type="FontFile" uid="uid://b3dpano12x07u" path="res://Army.ttf" id="2_w7x2g"]
+[ext_resource type="Texture2D" uid="uid://ceqo1vaj5gs6u" path="res://menues/image_de_fond_des_menues.png" id="3_5p6n3"]
+
+[sub_resource type="Theme" id="Theme_2kki2"]
+default_font = ExtResource("2_w7x2g")
+default_font_size = 0
+
+[sub_resource type="LabelSettings" id="LabelSettings_2kki2"]
+font = ExtResource("2_w7x2g")
+font_size = 100
+outline_size = 19
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 37
+
+[node name="Control" type="Control" unique_id=1416044094]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -5.0
+offset_top = -2.0
+offset_right = -6.0
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qbgc6")
+
+[node name="choisir une map" type="Button" parent="." unique_id=1103282917]
+z_index = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.33900002
+anchor_top = 0.23500001
+anchor_right = 0.58000004
+anchor_bottom = 0.702
+offset_left = 0.45898438
+offset_top = 220.43498
+offset_right = 123.97986
+offset_bottom = -197.45801
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_2kki2")
+theme_override_font_sizes/font_size = 53
+text = "Choisir une map"
+
+[node name="ecran_titre" type="Label" parent="." unique_id=677423064]
+auto_translate_mode = 1
+z_index = 1
+clip_contents = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.30449194
+anchor_top = 0.23319463
+anchor_right = 0.60849196
+anchor_bottom = 0.7141947
+offset_left = 58.679993
+offset_top = -1.6170044
+offset_right = 70.303955
+offset_bottom = -440.6161
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 43
+text = "CALL OF VAR"
+label_settings = SubResource("LabelSettings_2kki2")
+
+[node name="image de fond" type="Sprite2D" parent="." unique_id=302654986]
+position = Vector2(974, 544.25)
+scale = Vector2(1.1519139, 1.1493093)
+texture = ExtResource("3_5p6n3")
+
+[node name="Button" type="Button" parent="." unique_id=2018971893]
+layout_mode = 0
+offset_left = 662.0
+offset_top = 618.0
+offset_right = 1208.0
+offset_bottom = 697.0
+theme_override_font_sizes/font_size = 53
+text = "Reglages"
+
+[connection signal="pressed" from="choisir une map" to="." method="_on_choisir_une_map_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

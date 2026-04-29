@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://cbia3tamma4uj"]
+
+[ext_resource type="Script" uid="uid://cwlm6368f27jb" path="res://map.gd" id="1_c7s6e"]
+[ext_resource type="Script" uid="uid://x7hk2lh2ult" path="res://maps/france/camera_2d.gd" id="2_wijl4"]
+
+[node name="Map" type="Node2D" unique_id=309569442]
+script = ExtResource("1_c7s6e")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1860107190]
+position = Vector2(967, 548)
+script = ExtResource("2_wijl4")
