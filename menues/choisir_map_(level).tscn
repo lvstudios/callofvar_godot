@@ -28,19 +28,13 @@ text = "FRANCE
 icon = SubResource("CompressedTexture2D_tuue4")
 expand_icon = true
 
-[node name="ImageDeFondDesMenues" type="Sprite2D" parent="." unique_id=18819505]
-z_index = -1
-position = Vector2(973, 542.25)
-scale = Vector2(1.1483253, 1.1450584)
-texture = ExtResource("2_tuue4")
-
 [node name="titre_consigne" type="Label" parent="." unique_id=253791995]
 offset_left = 171.0
 offset_top = 66.0
 offset_right = 896.0
 offset_bottom = 134.0
 theme_override_font_sizes/font_size = 30
-text = "Choisissez une map"
+text = "CHOOSE_A_MAP"
 label_settings = SubResource("LabelSettings_typ25")
 
 [node name="retour" type="Button" parent="." unique_id=795111069]
@@ -49,10 +43,16 @@ offset_top = 903.0
 offset_right = 1101.0
 offset_bottom = 1055.0
 theme_override_font_sizes/font_size = 34
-text = "Retour"
+text = "CANCEL"
 icon = SubResource("CompressedTexture2D_typ25")
 flat = true
 expand_icon = true
+
+[node name="image de fond" type="Sprite2D" parent="." unique_id=1279806161]
+z_index = -1
+position = Vector2(960, 540.00006)
+scale = Vector2(1.1483253, 1.1477152)
+texture = ExtResource("2_tuue4")
 
 [connection signal="pressed" from="France metropolitaine" to="." method="_on_france_metropolitaine_pressed"]
 [connection signal="pressed" from="retour" to="." method="_on_retour_pressed"]

@@ -29,6 +29,7 @@ grow_vertical = 2
 script = ExtResource("1_qbgc6")
 
 [node name="choisir une map" type="Button" parent="." unique_id=1103282917]
+auto_translate_mode = 1
 z_index = 1
 layout_mode = 1
 anchors_preset = -1
@@ -42,9 +43,10 @@ offset_right = 123.97986
 offset_bottom = -197.45801
 grow_horizontal = 2
 grow_vertical = 2
+tooltip_auto_translate_mode = 1
 theme = SubResource("Theme_2kki2")
 theme_override_font_sizes/font_size = 53
-text = "Choisir une map"
+text = "CHOOSE_A_MAP"
 
 [node name="ecran_titre" type="Label" parent="." unique_id=677423064]
 auto_translate_mode = 1
@@ -67,8 +69,8 @@ text = "CALL OF VAR"
 label_settings = SubResource("LabelSettings_2kki2")
 
 [node name="image de fond" type="Sprite2D" parent="." unique_id=302654986]
-position = Vector2(974, 544.25)
-scale = Vector2(1.1519139, 1.1493093)
+position = Vector2(965.5, 543.5)
+scale = Vector2(1.1489234, 1.1509033)
 texture = ExtResource("3_5p6n3")
 
 [node name="Button" type="Button" parent="." unique_id=2018971893]
@@ -78,7 +80,7 @@ offset_top = 618.0
 offset_right = 1208.0
 offset_bottom = 697.0
 theme_override_font_sizes/font_size = 53
-text = "Reglages"
+text = "SETTINGS"
 
 [connection signal="pressed" from="choisir une map" to="." method="_on_choisir_une_map_pressed"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -16,6 +16,10 @@ config/features=PackedStringArray("4.6", "Forward Plus")
 boot_splash/image="uid://35bcsm346u5v"
 config/icon="res://icon.svg"
 
+[autoload]
+
+ConfigManager="*uid://b4dlx5hdaelub"
+
 [display]
 
 window/size/viewport_width=1920
@@ -34,6 +38,10 @@ enabled=PackedStringArray()
 [gui]
 
 theme/custom_font="uid://b3dpano12x07u"
+
+[internationalization]
+
+locale/translations=PackedStringArray("res://Feuille de calcul sans titre - Feuille 1 (2).de.translation", "res://Feuille de calcul sans titre - Feuille 1 (2).en.translation", "res://Feuille de calcul sans titre - Feuille 1 (2).es.translation", "res://Feuille de calcul sans titre - Feuille 1 (2).fr.translation")
 
 [physics]
 

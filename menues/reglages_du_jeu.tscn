@@ -10,8 +10,8 @@ load_path = "res://.godot/imported/bouton-retour.png-09d474d5e8f7a57dde8961eb54d
 script = ExtResource("1_u0jec")
 
 [node name="ImageDeFondDesMenues" type="Sprite2D" parent="." unique_id=1971080884]
-position = Vector2(954.5, 539.25)
-scale = Vector2(1.1561005, 1.142933)
+position = Vector2(960, 540)
+scale = Vector2(1.1483253, 1.1477151)
 texture = ExtResource("1_l63fl")
 
 [node name="CheckButton" type="CheckButton" parent="." unique_id=996940289]
@@ -25,7 +25,7 @@ theme_override_constants/outline_size = 10
 theme_override_font_sizes/font_size = 43
 theme_override_colors/button_checked_color = Color(0, 1, 0.2784314, 1)
 theme_override_colors/button_unchecked_color = Color(1, 0, 0, 1)
-text = "plein ecran "
+text = "FULL_SCREEN"
 
 [node name="Button" type="Button" parent="." unique_id=715500377]
 offset_left = 803.0
@@ -33,10 +33,33 @@ offset_top = 903.0
 offset_right = 1075.0
 offset_bottom = 1055.0
 theme_override_font_sizes/font_size = 34
-text = "Retour"
+text = "CANCEL"
 icon = SubResource("CompressedTexture2D_u0jec")
 flat = true
 expand_icon = true
 
+[node name="Label" type="Label" parent="." unique_id=1006688012]
+offset_right = 40.0
+offset_bottom = 12.0
+
+[node name="OptionButton" type="OptionButton" parent="." unique_id=1083929900]
+offset_left = 235.0
+offset_top = 237.0
+offset_right = 267.0
+offset_bottom = 257.0
+selected = 1
+fit_to_longest_item = false
+item_count = 4
+popup/item_0/text = "English (preview)"
+popup/item_0/id = 1
+popup/item_1/text = "Français"
+popup/item_1/id = 0
+popup/item_2/text = "Deutsch (Vorschau)"
+popup/item_2/id = 2
+popup/item_3/text = "Español (Vista previa)"
+popup/item_3/id = 3
+
 [connection signal="pressed" from="CheckButton" to="." method="_on_check_button_pressed"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="item_selected" from="OptionButton" to="." method="_on_option_button_item_selected"]
+[connection signal="pressed" from="OptionButton" to="." method="_on_option_button_pressed"]
