@@ -2,6 +2,11 @@
 
 [ext_resource type="Script" uid="uid://cwlm6368f27jb" path="res://map.gd" id="1_c7s6e"]
 [ext_resource type="Script" uid="uid://x7hk2lh2ult" path="res://maps/france/camera_2d.gd" id="2_wijl4"]
+[ext_resource type="Texture2D" uid="uid://ceqo1vaj5gs6u" path="res://menues/image_de_fond_des_menues.png" id="3_ycc86"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_h5ekw"]
+font_size = 100
+outline_size = 4
 
 [node name="Map" type="Node2D" unique_id=309569442]
 script = ExtResource("1_c7s6e")
@@ -9,3 +14,22 @@ script = ExtResource("1_c7s6e")
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1860107190]
 position = Vector2(967, 548)
 script = ExtResource("2_wijl4")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1315383508]
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=1868496600]
+light_mask = 2
+visibility_layer = 2
+z_index = 1
+offset_left = 434.0
+offset_top = 47.0
+offset_right = 2231.0
+offset_bottom = 237.0
+theme_override_constants/outline_size = 5
+text = "CHOOSE_A_REGION"
+label_settings = SubResource("LabelSettings_h5ekw")
+
+[node name="ImageDeFondDesMenues" type="Sprite2D" parent="CanvasLayer" unique_id=1482940771]
+position = Vector2(887, 80)
+scale = Vector2(0.6100479, 0.1285866)
+texture = ExtResource("3_ycc86")

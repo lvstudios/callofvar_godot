@@ -14,7 +14,7 @@ config/name="Nouveau projet de jeu"
 run/main_scene="res://menues/menu principal.tscn"
 config/features=PackedStringArray("4.6", "Forward Plus")
 boot_splash/image="uid://35bcsm346u5v"
-config/icon="res://icon.svg"
+config/icon="uid://d006khjaets2q"
 
 [autoload]
 
