@@ -2,11 +2,24 @@
 
 [ext_resource type="Script" uid="uid://cwlm6368f27jb" path="res://map.gd" id="1_c7s6e"]
 [ext_resource type="Script" uid="uid://x7hk2lh2ult" path="res://maps/france/camera_2d.gd" id="2_wijl4"]
-[ext_resource type="Texture2D" uid="uid://ceqo1vaj5gs6u" path="res://menues/image_de_fond_des_menues.png" id="3_ycc86"]
+[ext_resource type="Script" uid="uid://dmsl60pb1dw3b" path="res://maps/france/icone-home.gd" id="3_p84sp"]
+[ext_resource type="Texture2D" uid="uid://sww3qp363yf6" path="res://house.png" id="3_ycc86"]
+[ext_resource type="Script" uid="uid://d30b27plalog" path="res://maps/france/bouton-reglagesèui.gd" id="5_i837l"]
+[ext_resource type="Texture2D" uid="uid://dn8hr3v3f4hn7" path="res://settings.png" id="5_yfu63"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_h5ekw"]
-font_size = 100
-outline_size = 4
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ycc86"]
+bg_color = Color(0.3019608, 0.22745098, 0.18039216, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 80
+corner_radius_top_right = 80
+corner_radius_bottom_right = 80
+corner_radius_bottom_left = 80
+corner_detail = 20
+shadow_size = 6
 
 [node name="Map" type="Node2D" unique_id=309569442]
 script = ExtResource("1_c7s6e")
@@ -15,21 +28,40 @@ script = ExtResource("1_c7s6e")
 position = Vector2(967, 548)
 script = ExtResource("2_wijl4")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1315383508]
+[node name="icone-retour au menu" type="CanvasLayer" parent="." unique_id=1795397068]
 
-[node name="Label" type="Label" parent="CanvasLayer" unique_id=1868496600]
-light_mask = 2
-visibility_layer = 2
+[node name="Panel" type="Panel" parent="icone-retour au menu" unique_id=1970736592]
+offset_left = 710.0
+offset_top = 917.0
+offset_right = 811.0
+offset_bottom = 1023.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ycc86")
+script = ExtResource("3_p84sp")
+
+[node name="House" type="Sprite2D" parent="icone-retour au menu/Panel" unique_id=1790251843]
 z_index = 1
-offset_left = 434.0
-offset_top = 47.0
-offset_right = 2231.0
-offset_bottom = 237.0
-theme_override_constants/outline_size = 5
-text = "CHOOSE_A_REGION"
-label_settings = SubResource("LabelSettings_h5ekw")
-
-[node name="ImageDeFondDesMenues" type="Sprite2D" parent="CanvasLayer" unique_id=1482940771]
-position = Vector2(887, 80)
-scale = Vector2(0.6100479, 0.1285866)
+position = Vector2(50.99994, 52)
+scale = Vector2(3.5833368, 3.2291682)
 texture = ExtResource("3_ycc86")
+
+[node name="icone-retour au menu2" type="CanvasLayer" parent="." unique_id=1667338258]
+
+[node name="Panel" type="Panel" parent="icone-retour au menu2" unique_id=422404531]
+offset_left = 835.0
+offset_top = 917.0
+offset_right = 936.0
+offset_bottom = 1023.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ycc86")
+script = ExtResource("5_i837l")
+
+[node name="Settings" type="Sprite2D" parent="icone-retour au menu2/Panel" unique_id=1863931590]
+position = Vector2(50.999977, 54.49996)
+scale = Vector2(3.7499995, 3.458328)
+texture = ExtResource("5_yfu63")
+
+[connection signal="gui_input" from="icone-retour au menu/Panel" to="icone-retour au menu/Panel" method="_on_gui_input"]
+[connection signal="mouse_entered" from="icone-retour au menu/Panel" to="icone-retour au menu/Panel" method="_on_hover"]
+[connection signal="mouse_exited" from="icone-retour au menu/Panel" to="icone-retour au menu/Panel" method="_on_exit"]
+[connection signal="gui_input" from="icone-retour au menu2/Panel" to="icone-retour au menu2/Panel" method="_on_gui_input"]
+[connection signal="mouse_entered" from="icone-retour au menu2/Panel" to="icone-retour au menu2/Panel" method="_on_hover"]
+[connection signal="mouse_exited" from="icone-retour au menu2/Panel" to="icone-retour au menu2/Panel" method="_on_exit"]

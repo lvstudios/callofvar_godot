@@ -9,8 +9,8 @@ extends Node2D
 @export var screen_offset: Vector2 = Vector2(576, 324) # Déplace le bloc bleu (X: droite/gauche, Y: haut/bas)
 
 @export_group("Apparence")
-@export var default_color: Color = Color("5c8de0ff")
-@export var hover_color: Color = Color("295299ff")
+@export var default_color: Color = Color("1012ffff")
+@export var hover_color: Color = Color("2952ffff")
 
 # --- Paramètres de Caméra ---
 @export_group("Caméra")
@@ -110,3 +110,17 @@ func _on_region_entered(node: Polygon2D):
 
 func _on_region_exited(node: Polygon2D):
 	node.color = default_color
+
+
+
+
+
+
+
+
+func _on_panel_mouse_entered() -> void:
+	pass # Replace with function body.
+
+
+func _on_panel_gui_input(event: InputEvent) -> void:
+	pass # Replace with function body.
